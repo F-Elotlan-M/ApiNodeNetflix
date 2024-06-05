@@ -12,9 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Cors
 const corsOptions = {
-    origin: (origin, callback) => {
-        callback(null, true);
-    },
+    origin: "*", // Permitir todos los orígenes
     methods: "GET,PUT,POST,DELETE",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true
